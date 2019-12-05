@@ -20,31 +20,9 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'tab2',
-        children: [
-          {
-            path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
-          },
-          {
-            path: 'agregar/:listaId',
-            loadChildren: '../agregar/agregar.module#AgregarPageModule'
-          }
-        ]
-      },
-      {
-        path: '',
-        redirectTo: '/tabs/tab2',
-        pathMatch: 'full'
-      }
     ]
-  },
-  {
-    path: '',
-    redirectTo: '/tabs/tab2',
-    pathMatch: 'full'
   }
+      
 ];
 
 @NgModule({
@@ -53,4 +31,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

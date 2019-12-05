@@ -1,4 +1,4 @@
-export class Fechamodel {
+export class Fecha {
 
     private _dia: number;
     private _mes: number;

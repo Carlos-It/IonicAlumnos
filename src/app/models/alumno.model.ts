@@ -1,11 +1,11 @@
-import { Fechamodel } from './fecha.model';
+import { Fecha } from './fecha.model';
 
 export enum Sexo { Hombre, Mujer };
-export class AlumnoModel {
+export class Alumno {
 
     private _nombre: string;
     private _apellidos: string;
-    private _F_Nac: Fechamodel;
+    private _F_Nac: Fecha;
     private _sexo: Sexo;
     private _email: string;
     private _telefono: number;
@@ -18,7 +18,7 @@ export class AlumnoModel {
         this._nombre = nombre;
         this._apellidos = apellidos;
         if (fNac) {
-            this._F_Nac = new Fechamodel(fNac);
+            this._F_Nac = new Fecha(fNac);
         }
         if (sexo) {
             this._sexo = sexo;
@@ -41,10 +41,10 @@ export class AlumnoModel {
     public set nombre(value: string) {
         this._nombre = value;
     }
-    public get F_Nac(): Fechamodel {
-        return this._F_Nac;
+    public get F_Nac(): Fecha {
+    return this._F_Nac;
     }
-    public set F_Nac(value: Fechamodel) {
+    public set F_Nac(value: Fecha) {
         this._F_Nac = value;
     }
 
